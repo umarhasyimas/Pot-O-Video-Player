@@ -369,7 +369,7 @@ class MainWindow(QMainWindow):
 		if file_dialog.exec_() == QDialog.Accepted:
 			url = file_dialog.selectedUrls()[0]
 			file_name = url.fileName()  # Extract the file name from the URL
-			self.setWindowTitle(f"{file_name} - Sprite Player v0.1.0.1-alpha")  # Set window title
+			self.setWindowTitle(f"{file_name} - Pot-O Video Player v0.1.0.1-alpha")  # Set window title
 			self._playlist.append(url)
 			self._playlist_index = len(self._playlist) - 1
 			self._player.setMedia(QMediaContent(url))
@@ -619,7 +619,7 @@ class MainWindow(QMainWindow):
 if __name__ == '__main__':
 	app = QApplication(sys.argv)
 	main_win = MainWindow()
-	app.setApplicationDisplayName("Sprite Player v0.1.0.1-alpha")
+	app.setApplicationDisplayName("Pot-O Video Player v0.1.0.1-alpha")
 	available_geometry = main_win.screen().availableGeometry()
 	main_win.resize(int(available_geometry.width() / 1.5), int(available_geometry.height() / 1.3))
 	main_win.show()
